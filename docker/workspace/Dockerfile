@@ -31,8 +31,9 @@ RUN DEBIAN_FRONTEND=noninteractive && \
         php7.4-dev \
         php7.4-xdebug \
         php7.4-pgsql \
-        php-redis \
-        php-zip \
+        php7.4-redis \
+        php7.4-zip \
+        php7.4-dev \
         pkg-config \
         postgresql-client \
         software-properties-common \
@@ -49,7 +50,6 @@ RUN DEBIAN_FRONTEND=noninteractive && \
         postgresql-client \
         apt-utils \
         build-essential \
-        php-dev \
         zlib1g-dev \
         nasm \
         libpng-dev \
