@@ -1,0 +1,537 @@
+{
+	"info": {
+		"_postman_id": "1e22dd87-bafd-4736-b23b-23d402943dc1",
+		"name": "Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "List Creatives",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|Jp8Z2gYIx0D70PR8G0VR2r4J664k0kmFSbOh86ev",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://society6.localhost/api/user/creatives/",
+							"protocol": "http",
+							"host": [
+								"society6",
+								"localhost"
+							],
+							"path": [
+								"api",
+								"user",
+								"creatives",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Creative",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|Jp8Z2gYIx0D70PR8G0VR2r4J664k0kmFSbOh86ev",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "image_url",
+									"value": "other_artwork_new",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://society6.localhost/api/user/creatives",
+							"protocol": "http",
+							"host": [
+								"society6",
+								"localhost"
+							],
+							"path": [
+								"api",
+								"user",
+								"creatives"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Specific Creative",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|Jp8Z2gYIx0D70PR8G0VR2r4J664k0kmFSbOh86ev",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://society6.localhost/api/user/creatives/2",
+							"protocol": "http",
+							"host": [
+								"society6",
+								"localhost"
+							],
+							"path": [
+								"api",
+								"user",
+								"creatives",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Creative",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|Jp8Z2gYIx0D70PR8G0VR2r4J664k0kmFSbOh86ev",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "image_url",
+									"value": "something_awesome",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://society6.localhost/api/user/creatives/2",
+							"protocol": "http",
+							"host": [
+								"society6",
+								"localhost"
+							],
+							"path": [
+								"api",
+								"user",
+								"creatives",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Creative For Sale",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|Jp8Z2gYIx0D70PR8G0VR2r4J664k0kmFSbOh86ev",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "sku",
+									"value": "4578",
+									"type": "text"
+								},
+								{
+									"key": "product_type",
+									"value": "Mugs",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "20",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://society6.localhost/api/user/creatives/2/listForSale",
+							"protocol": "http",
+							"host": [
+								"society6",
+								"localhost"
+							],
+							"path": [
+								"api",
+								"user",
+								"creatives",
+								"2",
+								"listForSale"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "List All Products For Sale",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|Jp8Z2gYIx0D70PR8G0VR2r4J664k0kmFSbOh86ev",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://society6.localhost/api/user/shop",
+							"protocol": "http",
+							"host": [
+								"society6",
+								"localhost"
+							],
+							"path": [
+								"api",
+								"user",
+								"shop"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Place Order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|Jp8Z2gYIx0D70PR8G0VR2r4J664k0kmFSbOh86ev",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "products[]",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "quantities[]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "products[]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "quantities[]",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://society6.localhost/api/user/shop/placeOrder",
+							"protocol": "http",
+							"host": [
+								"society6",
+								"localhost"
+							],
+							"path": [
+								"api",
+								"user",
+								"shop",
+								"placeOrder"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vendor",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "vendor1@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://society6.localhost/api/login",
+							"protocol": "http",
+							"host": [
+								"society6",
+								"localhost"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						},
+						"description": "Duplicate, exactly same as user."
+					},
+					"response": []
+				},
+				{
+					"name": "List Orders Pending For Processing",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|PYbNMUpEAzqV0zlEC06rHqgSOcHy2HMMe3NY4pFh",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://society6.localhost/api/vendor/orders",
+							"protocol": "http",
+							"host": [
+								"society6",
+								"localhost"
+							],
+							"path": [
+								"api",
+								"vendor",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Order (Item) Status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|PYbNMUpEAzqV0zlEC06rHqgSOcHy2HMMe3NY4pFh",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "order_line_item_id",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "shipped",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://society6.localhost/api/vendor/orders",
+							"protocol": "http",
+							"host": [
+								"society6",
+								"localhost"
+							],
+							"path": [
+								"api",
+								"vendor",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "user@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://society6.localhost/api/login",
+					"protocol": "http",
+					"host": [
+						"society6",
+						"localhost"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
